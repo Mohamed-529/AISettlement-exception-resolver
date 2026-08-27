@@ -1,0 +1,6 @@
+payment_id,order_id,amount,payment_status
+PAY001,ORD001,10000,paid
+PAY002,ORD002,7500,paid
+PAY003,ORD003,12000,paid
+PAY004,ORD004,5000,paid
+PAY005,ORD005,8000,paid

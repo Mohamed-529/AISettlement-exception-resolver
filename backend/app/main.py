@@ -1,28 +1,23 @@
 from fastapi import FastAPI
 
-app = FastAPI(title="AI Settlement Exception Resolver")
+from app.api.tax_api import router as tax_router
+
+
+app = FastAPI(title="TaxLens AI - Tax Line Matcher")
+
+
+app.include_router(tax_router)
 
 
 @app.get("/")
 def root():
     return {
-        "message": "AI Settlement Exception Resolver API"
+        "message": "TaxLens AI is running"
     }
 
 
-@app.get("/settlements")
-def get_settlements():
+@app.get("/health")
+def health():
     return {
-        "settlements": [
-            {
-                "id": "SET001",
-                "amount": 10000,
-                "status": "matched"
-            },
-            {
-                "id": "SET002",
-                "amount": 7500,
-                "status": "exception"
-            }
-        ]
+        "status": "healthy"
     }
