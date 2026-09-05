@@ -1,0 +1,4 @@
+pytest>=7.4.0
+# Only required for `--mode llm` (real Anthropic API calls in Phase 2).
+# `--mode mock` (the default, used for offline testing and CI) needs nothing extra.
+anthropic>=0.40.0

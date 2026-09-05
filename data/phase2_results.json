@@ -1,0 +1,1644 @@
+{
+  "summary": {
+    "total_records": 100,
+    "matched": 60,
+    "exceptions_total": 40,
+    "agent_auto_resolved": 10,
+    "agent_suggested_approval": 15,
+    "agent_escalated": 15
+  },
+  "agent_outputs": [
+    {
+      "payment_id": "P003",
+      "engine_exception_type": "DATE_MISMATCH",
+      "agent_exception_type": "POSSIBLE_DELAYED_SETTLEMENT",
+      "root_cause": "Amounts reconcile; the bank side settled later than the payment date, consistent with normal settlement delay.",
+      "evidence": [
+        "Payment, bank, and ledger amounts agree",
+        "Bank settlement date differs from payment date"
+      ],
+      "confidence": 0.95,
+      "recommendation": "Auto-resolve",
+      "decision": "AUTO_RESOLVE",
+      "action": "reconciliation_status_updated"
+    },
+    {
+      "payment_id": "P005",
+      "engine_exception_type": "AMOUNT_MISMATCH",
+      "agent_exception_type": "AMOUNT_MISMATCH",
+      "root_cause": "The bank amount disagrees with the payment amount by -192.0. Cause not confirmed \u2014 could be a fee, partial settlement, or data entry error.",
+      "evidence": [
+        "Payment amount: 193.0",
+        "Bank amount: 1.0",
+        "Ledger amount: 193.0"
+      ],
+      "confidence": 0.6,
+      "recommendation": "Human review",
+      "decision": "ESCALATE_HUMAN_REVIEW",
+      "action": "escalated_for_investigation"
+    },
+    {
+      "payment_id": "P008",
+      "engine_exception_type": "BANK_RECORD_MISSING",
+      "agent_exception_type": "BANK_RECORD_MISSING",
+      "root_cause": "Payment was captured and recorded in the ledger, but no corresponding bank transaction is present. Possible delayed or missing settlement \u2014 not confirmed.",
+      "evidence": [
+        "Payment was captured",
+        "Ledger entry exists",
+        "No matching bank transaction found"
+      ],
+      "confidence": 0.8,
+      "recommendation": "Human review",
+      "decision": "SUGGEST_HUMAN_APPROVAL",
+      "action": "pending_human_approval"
+    },
+    {
+      "payment_id": "P010",
+      "engine_exception_type": "LEDGER_RECORD_MISSING",
+      "agent_exception_type": "LEDGER_RECORD_MISSING",
+      "root_cause": "Bank confirms settlement, but the merchant ledger has no matching entry. Possible posting delay or an internal bookkeeping gap \u2014 not confirmed.",
+      "evidence": [
+        "Payment was captured",
+        "Bank transaction is present",
+        "No matching ledger entry found"
+      ],
+      "confidence": 0.75,
+      "recommendation": "Human review",
+      "decision": "SUGGEST_HUMAN_APPROVAL",
+      "action": "pending_human_approval"
+    },
+    {
+      "payment_id": "P011",
+      "engine_exception_type": "BANK_RECORD_MISSING",
+      "agent_exception_type": "BANK_RECORD_MISSING",
+      "root_cause": "Payment was captured and recorded in the ledger, but no corresponding bank transaction is present. Possible delayed or missing settlement \u2014 not confirmed.",
+      "evidence": [
+        "Payment was captured",
+        "Ledger entry exists",
+        "No matching bank transaction found"
+      ],
+      "confidence": 0.8,
+      "recommendation": "Human review",
+      "decision": "SUGGEST_HUMAN_APPROVAL",
+      "action": "pending_human_approval"
+    },
+    {
+      "payment_id": "P015",
+      "engine_exception_type": "BANK_RECORD_MISSING",
+      "agent_exception_type": "BANK_RECORD_MISSING",
+      "root_cause": "Payment was captured and recorded in the ledger, but no corresponding bank transaction is present. Possible delayed or missing settlement \u2014 not confirmed.",
+      "evidence": [
+        "Payment was captured",
+        "Ledger entry exists",
+        "No matching bank transaction found"
+      ],
+      "confidence": 0.8,
+      "recommendation": "Human review",
+      "decision": "SUGGEST_HUMAN_APPROVAL",
+      "action": "pending_human_approval"
+    },
+    {
+      "payment_id": "P018",
+      "engine_exception_type": "DATE_MISMATCH",
+      "agent_exception_type": "POSSIBLE_DELAYED_SETTLEMENT",
+      "root_cause": "Amounts reconcile; the bank side settled later than the payment date, consistent with normal settlement delay.",
+      "evidence": [
+        "Payment, bank, and ledger amounts agree",
+        "Bank settlement date differs from payment date"
+      ],
+      "confidence": 0.95,
+      "recommendation": "Auto-resolve",
+      "decision": "AUTO_RESOLVE",
+      "action": "reconciliation_status_updated"
+    },
+    {
+      "payment_id": "P019",
+      "engine_exception_type": "BANK_RECORD_MISSING",
+      "agent_exception_type": "BANK_RECORD_MISSING",
+      "root_cause": "Payment was captured and recorded in the ledger, but no corresponding bank transaction is present. Possible delayed or missing settlement \u2014 not confirmed.",
+      "evidence": [
+        "Payment was captured",
+        "Ledger entry exists",
+        "No matching bank transaction found"
+      ],
+      "confidence": 0.8,
+      "recommendation": "Human review",
+      "decision": "SUGGEST_HUMAN_APPROVAL",
+      "action": "pending_human_approval"
+    },
+    {
+      "payment_id": "P024",
+      "engine_exception_type": "AMBIGUOUS",
+      "agent_exception_type": "UNRESOLVED",
+      "root_cause": "Evidence shows small, multi-field drift that does not match a single known pattern confidently enough to classify.",
+      "evidence": [
+        "Multiple small discrepancies across sources",
+        "No single field disagreement explains it cleanly"
+      ],
+      "confidence": 0.45,
+      "recommendation": "Human review",
+      "decision": "ESCALATE_HUMAN_REVIEW",
+      "action": "escalated_for_investigation"
+    },
+    {
+      "payment_id": "P025",
+      "engine_exception_type": "LEDGER_RECORD_MISSING",
+      "agent_exception_type": "LEDGER_RECORD_MISSING",
+      "root_cause": "Bank confirms settlement, but the merchant ledger has no matching entry. Possible posting delay or an internal bookkeeping gap \u2014 not confirmed.",
+      "evidence": [
+        "Payment was captured",
+        "Bank transaction is present",
+        "No matching ledger entry found"
+      ],
+      "confidence": 0.75,
+      "recommendation": "Human review",
+      "decision": "SUGGEST_HUMAN_APPROVAL",
+      "action": "pending_human_approval"
+    },
+    {
+      "payment_id": "P027",
+      "engine_exception_type": "LEDGER_RECORD_MISSING",
+      "agent_exception_type": "LEDGER_RECORD_MISSING",
+      "root_cause": "Bank confirms settlement, but the merchant ledger has no matching entry. Possible posting delay or an internal bookkeeping gap \u2014 not confirmed.",
+      "evidence": [
+        "Payment was captured",
+        "Bank transaction is present",
+        "No matching ledger entry found"
+      ],
+      "confidence": 0.75,
+      "recommendation": "Human review",
+      "decision": "SUGGEST_HUMAN_APPROVAL",
+      "action": "pending_human_approval"
+    },
+    {
+      "payment_id": "P029",
+      "engine_exception_type": "POSSIBLE_DUPLICATE",
+      "agent_exception_type": "DUPLICATE_TRANSACTION",
+      "root_cause": "2 bank-side transactions reference one payment while the ledger shows a single entry, consistent with a duplicate bank posting.",
+      "evidence": [
+        "2 bank transactions reference this single payment",
+        "Ledger shows only one corresponding entry"
+      ],
+      "confidence": 0.91,
+      "recommendation": "Auto-resolve",
+      "decision": "AUTO_RESOLVE",
+      "action": "reconciliation_status_updated"
+    },
+    {
+      "payment_id": "P034",
+      "engine_exception_type": "AMOUNT_MISMATCH",
+      "agent_exception_type": "AMOUNT_MISMATCH",
+      "root_cause": "The bank amount disagrees with the payment amount by -500.0. Cause not confirmed \u2014 could be a fee, partial settlement, or data entry error.",
+      "evidence": [
+        "Payment amount: 42954.0",
+        "Bank amount: 42454.0",
+        "Ledger amount: 42954.0"
+      ],
+      "confidence": 0.55,
+      "recommendation": "Human review",
+      "decision": "ESCALATE_HUMAN_REVIEW",
+      "action": "escalated_for_investigation"
+    },
+    {
+      "payment_id": "P035",
+      "engine_exception_type": "BANK_RECORD_MISSING",
+      "agent_exception_type": "BANK_RECORD_MISSING",
+      "root_cause": "Payment was captured and recorded in the ledger, but no corresponding bank transaction is present. Possible delayed or missing settlement \u2014 not confirmed.",
+      "evidence": [
+        "Payment was captured",
+        "Ledger entry exists",
+        "No matching bank transaction found"
+      ],
+      "confidence": 0.8,
+      "recommendation": "Human review",
+      "decision": "SUGGEST_HUMAN_APPROVAL",
+      "action": "pending_human_approval"
+    },
+    {
+      "payment_id": "P037",
+      "engine_exception_type": "AMBIGUOUS",
+      "agent_exception_type": "UNRESOLVED",
+      "root_cause": "Evidence shows small, multi-field drift that does not match a single known pattern confidently enough to classify.",
+      "evidence": [
+        "Multiple small discrepancies across sources",
+        "No single field disagreement explains it cleanly"
+      ],
+      "confidence": 0.45,
+      "recommendation": "Human review",
+      "decision": "ESCALATE_HUMAN_REVIEW",
+      "action": "escalated_for_investigation"
+    },
+    {
+      "payment_id": "P039",
+      "engine_exception_type": "POSSIBLE_DUPLICATE",
+      "agent_exception_type": "DUPLICATE_TRANSACTION",
+      "root_cause": "2 bank-side transactions reference one payment while the ledger shows a single entry, consistent with a duplicate bank posting.",
+      "evidence": [
+        "2 bank transactions reference this single payment",
+        "Ledger shows only one corresponding entry"
+      ],
+      "confidence": 0.91,
+      "recommendation": "Auto-resolve",
+      "decision": "AUTO_RESOLVE",
+      "action": "reconciliation_status_updated"
+    },
+    {
+      "payment_id": "P046",
+      "engine_exception_type": "AMOUNT_MISMATCH",
+      "agent_exception_type": "AMOUNT_MISMATCH",
+      "root_cause": "The bank amount disagrees with the payment amount by 750.0. Cause not confirmed \u2014 could be a fee, partial settlement, or data entry error.",
+      "evidence": [
+        "Payment amount: 23342.0",
+        "Bank amount: 24092.0",
+        "Ledger amount: 23342.0"
+      ],
+      "confidence": 0.68,
+      "recommendation": "Human review",
+      "decision": "ESCALATE_HUMAN_REVIEW",
+      "action": "escalated_for_investigation"
+    },
+    {
+      "payment_id": "P047",
+      "engine_exception_type": "AMOUNT_MISMATCH",
+      "agent_exception_type": "AMOUNT_MISMATCH",
+      "root_cause": "The bank amount disagrees with the payment amount by 500.0. Cause not confirmed \u2014 could be a fee, partial settlement, or data entry error.",
+      "evidence": [
+        "Payment amount: 617.0",
+        "Bank amount: 1117.0",
+        "Ledger amount: 617.0"
+      ],
+      "confidence": 0.6,
+      "recommendation": "Human review",
+      "decision": "ESCALATE_HUMAN_REVIEW",
+      "action": "escalated_for_investigation"
+    },
+    {
+      "payment_id": "P048",
+      "engine_exception_type": "AMOUNT_MISMATCH",
+      "agent_exception_type": "AMOUNT_MISMATCH",
+      "root_cause": "The bank amount disagrees with the payment amount by 750.0. Cause not confirmed \u2014 could be a fee, partial settlement, or data entry error.",
+      "evidence": [
+        "Payment amount: 949.0",
+        "Bank amount: 1699.0",
+        "Ledger amount: 949.0"
+      ],
+      "confidence": 0.6,
+      "recommendation": "Human review",
+      "decision": "ESCALATE_HUMAN_REVIEW",
+      "action": "escalated_for_investigation"
+    },
+    {
+      "payment_id": "P051",
+      "engine_exception_type": "AMBIGUOUS",
+      "agent_exception_type": "UNRESOLVED",
+      "root_cause": "Evidence shows small, multi-field drift that does not match a single known pattern confidently enough to classify.",
+      "evidence": [
+        "Multiple small discrepancies across sources",
+        "No single field disagreement explains it cleanly"
+      ],
+      "confidence": 0.45,
+      "recommendation": "Human review",
+      "decision": "ESCALATE_HUMAN_REVIEW",
+      "action": "escalated_for_investigation"
+    },
+    {
+      "payment_id": "P058",
+      "engine_exception_type": "AMOUNT_MISMATCH",
+      "agent_exception_type": "AMOUNT_MISMATCH",
+      "root_cause": "The bank amount disagrees with the payment amount by -100.0. Cause not confirmed \u2014 could be a fee, partial settlement, or data entry error.",
+      "evidence": [
+        "Payment amount: 1387.0",
+        "Bank amount: 1287.0",
+        "Ledger amount: 1387.0"
+      ],
+      "confidence": 0.68,
+      "recommendation": "Human review",
+      "decision": "ESCALATE_HUMAN_REVIEW",
+      "action": "escalated_for_investigation"
+    },
+    {
+      "payment_id": "P060",
+      "engine_exception_type": "AMOUNT_MISMATCH",
+      "agent_exception_type": "AMOUNT_MISMATCH",
+      "root_cause": "The bank amount disagrees with the payment amount by -100.0. Cause not confirmed \u2014 could be a fee, partial settlement, or data entry error.",
+      "evidence": [
+        "Payment amount: 795.0",
+        "Bank amount: 695.0",
+        "Ledger amount: 795.0"
+      ],
+      "confidence": 0.68,
+      "recommendation": "Human review",
+      "decision": "ESCALATE_HUMAN_REVIEW",
+      "action": "escalated_for_investigation"
+    },
+    {
+      "payment_id": "P064",
+      "engine_exception_type": "AMOUNT_MISMATCH",
+      "agent_exception_type": "AMOUNT_MISMATCH",
+      "root_cause": "The bank amount disagrees with the payment amount by -500.0. Cause not confirmed \u2014 could be a fee, partial settlement, or data entry error.",
+      "evidence": [
+        "Payment amount: 9821.0",
+        "Bank amount: 9321.0",
+        "Ledger amount: 9821.0"
+      ],
+      "confidence": 0.68,
+      "recommendation": "Human review",
+      "decision": "ESCALATE_HUMAN_REVIEW",
+      "action": "escalated_for_investigation"
+    },
+    {
+      "payment_id": "P065",
+      "engine_exception_type": "LEDGER_RECORD_MISSING",
+      "agent_exception_type": "LEDGER_RECORD_MISSING",
+      "root_cause": "Bank confirms settlement, but the merchant ledger has no matching entry. Possible posting delay or an internal bookkeeping gap \u2014 not confirmed.",
+      "evidence": [
+        "Payment was captured",
+        "Bank transaction is present",
+        "No matching ledger entry found"
+      ],
+      "confidence": 0.75,
+      "recommendation": "Human review",
+      "decision": "SUGGEST_HUMAN_APPROVAL",
+      "action": "pending_human_approval"
+    },
+    {
+      "payment_id": "P067",
+      "engine_exception_type": "LEDGER_RECORD_MISSING",
+      "agent_exception_type": "LEDGER_RECORD_MISSING",
+      "root_cause": "Bank confirms settlement, but the merchant ledger has no matching entry. Possible posting delay or an internal bookkeeping gap \u2014 not confirmed.",
+      "evidence": [
+        "Payment was captured",
+        "Bank transaction is present",
+        "No matching ledger entry found"
+      ],
+      "confidence": 0.75,
+      "recommendation": "Human review",
+      "decision": "SUGGEST_HUMAN_APPROVAL",
+      "action": "pending_human_approval"
+    },
+    {
+      "payment_id": "P069",
+      "engine_exception_type": "DATE_MISMATCH",
+      "agent_exception_type": "POSSIBLE_DELAYED_SETTLEMENT",
+      "root_cause": "Amounts reconcile; the bank side settled later than the payment date, consistent with normal settlement delay.",
+      "evidence": [
+        "Payment, bank, and ledger amounts agree",
+        "Bank settlement date differs from payment date"
+      ],
+      "confidence": 0.95,
+      "recommendation": "Auto-resolve",
+      "decision": "AUTO_RESOLVE",
+      "action": "reconciliation_status_updated"
+    },
+    {
+      "payment_id": "P072",
+      "engine_exception_type": "AMBIGUOUS",
+      "agent_exception_type": "UNRESOLVED",
+      "root_cause": "Evidence shows small, multi-field drift that does not match a single known pattern confidently enough to classify.",
+      "evidence": [
+        "Multiple small discrepancies across sources",
+        "No single field disagreement explains it cleanly"
+      ],
+      "confidence": 0.45,
+      "recommendation": "Human review",
+      "decision": "ESCALATE_HUMAN_REVIEW",
+      "action": "escalated_for_investigation"
+    },
+    {
+      "payment_id": "P074",
+      "engine_exception_type": "DATE_MISMATCH",
+      "agent_exception_type": "POSSIBLE_DELAYED_SETTLEMENT",
+      "root_cause": "Amounts reconcile; the bank side settled later than the payment date, consistent with normal settlement delay.",
+      "evidence": [
+        "Payment, bank, and ledger amounts agree",
+        "Bank settlement date differs from payment date"
+      ],
+      "confidence": 0.95,
+      "recommendation": "Auto-resolve",
+      "decision": "AUTO_RESOLVE",
+      "action": "reconciliation_status_updated"
+    },
+    {
+      "payment_id": "P076",
+      "engine_exception_type": "POSSIBLE_DUPLICATE",
+      "agent_exception_type": "DUPLICATE_TRANSACTION",
+      "root_cause": "2 bank-side transactions reference one payment while the ledger shows a single entry, consistent with a duplicate bank posting.",
+      "evidence": [
+        "2 bank transactions reference this single payment",
+        "Ledger shows only one corresponding entry"
+      ],
+      "confidence": 0.91,
+      "recommendation": "Auto-resolve",
+      "decision": "AUTO_RESOLVE",
+      "action": "reconciliation_status_updated"
+    },
+    {
+      "payment_id": "P078",
+      "engine_exception_type": "BANK_RECORD_MISSING",
+      "agent_exception_type": "BANK_RECORD_MISSING",
+      "root_cause": "Payment was captured and recorded in the ledger, but no corresponding bank transaction is present. Possible delayed or missing settlement \u2014 not confirmed.",
+      "evidence": [
+        "Payment was captured",
+        "Ledger entry exists",
+        "No matching bank transaction found"
+      ],
+      "confidence": 0.8,
+      "recommendation": "Human review",
+      "decision": "SUGGEST_HUMAN_APPROVAL",
+      "action": "pending_human_approval"
+    },
+    {
+      "payment_id": "P079",
+      "engine_exception_type": "LEDGER_RECORD_MISSING",
+      "agent_exception_type": "LEDGER_RECORD_MISSING",
+      "root_cause": "Bank confirms settlement, but the merchant ledger has no matching entry. Possible posting delay or an internal bookkeeping gap \u2014 not confirmed.",
+      "evidence": [
+        "Payment was captured",
+        "Bank transaction is present",
+        "No matching ledger entry found"
+      ],
+      "confidence": 0.75,
+      "recommendation": "Human review",
+      "decision": "SUGGEST_HUMAN_APPROVAL",
+      "action": "pending_human_approval"
+    },
+    {
+      "payment_id": "P080",
+      "engine_exception_type": "BANK_RECORD_MISSING",
+      "agent_exception_type": "BANK_RECORD_MISSING",
+      "root_cause": "Payment was captured and recorded in the ledger, but no corresponding bank transaction is present. Possible delayed or missing settlement \u2014 not confirmed.",
+      "evidence": [
+        "Payment was captured",
+        "Ledger entry exists",
+        "No matching bank transaction found"
+      ],
+      "confidence": 0.8,
+      "recommendation": "Human review",
+      "decision": "SUGGEST_HUMAN_APPROVAL",
+      "action": "pending_human_approval"
+    },
+    {
+      "payment_id": "P081",
+      "engine_exception_type": "AMOUNT_MISMATCH",
+      "agent_exception_type": "AMOUNT_MISMATCH",
+      "root_cause": "The bank amount disagrees with the payment amount by -250.0. Cause not confirmed \u2014 could be a fee, partial settlement, or data entry error.",
+      "evidence": [
+        "Payment amount: 15077.0",
+        "Bank amount: 14827.0",
+        "Ledger amount: 15077.0"
+      ],
+      "confidence": 0.55,
+      "recommendation": "Human review",
+      "decision": "ESCALATE_HUMAN_REVIEW",
+      "action": "escalated_for_investigation"
+    },
+    {
+      "payment_id": "P084",
+      "engine_exception_type": "POSSIBLE_DUPLICATE",
+      "agent_exception_type": "DUPLICATE_TRANSACTION",
+      "root_cause": "2 bank-side transactions reference one payment while the ledger shows a single entry, consistent with a duplicate bank posting.",
+      "evidence": [
+        "2 bank transactions reference this single payment",
+        "Ledger shows only one corresponding entry"
+      ],
+      "confidence": 0.91,
+      "recommendation": "Auto-resolve",
+      "decision": "AUTO_RESOLVE",
+      "action": "reconciliation_status_updated"
+    },
+    {
+      "payment_id": "P085",
+      "engine_exception_type": "AMBIGUOUS",
+      "agent_exception_type": "UNRESOLVED",
+      "root_cause": "Evidence shows small, multi-field drift that does not match a single known pattern confidently enough to classify.",
+      "evidence": [
+        "Multiple small discrepancies across sources",
+        "No single field disagreement explains it cleanly"
+      ],
+      "confidence": 0.45,
+      "recommendation": "Human review",
+      "decision": "ESCALATE_HUMAN_REVIEW",
+      "action": "escalated_for_investigation"
+    },
+    {
+      "payment_id": "P088",
+      "engine_exception_type": "BANK_RECORD_MISSING",
+      "agent_exception_type": "BANK_RECORD_MISSING",
+      "root_cause": "Payment was captured and recorded in the ledger, but no corresponding bank transaction is present. Possible delayed or missing settlement \u2014 not confirmed.",
+      "evidence": [
+        "Payment was captured",
+        "Ledger entry exists",
+        "No matching bank transaction found"
+      ],
+      "confidence": 0.8,
+      "recommendation": "Human review",
+      "decision": "SUGGEST_HUMAN_APPROVAL",
+      "action": "pending_human_approval"
+    },
+    {
+      "payment_id": "P090",
+      "engine_exception_type": "AMOUNT_MISMATCH",
+      "agent_exception_type": "AMOUNT_MISMATCH",
+      "root_cause": "The bank amount disagrees with the payment amount by 500.0. Cause not confirmed \u2014 could be a fee, partial settlement, or data entry error.",
+      "evidence": [
+        "Payment amount: 35822.0",
+        "Bank amount: 36322.0",
+        "Ledger amount: 35822.0"
+      ],
+      "confidence": 0.55,
+      "recommendation": "Human review",
+      "decision": "ESCALATE_HUMAN_REVIEW",
+      "action": "escalated_for_investigation"
+    },
+    {
+      "payment_id": "P091",
+      "engine_exception_type": "POSSIBLE_DUPLICATE",
+      "agent_exception_type": "DUPLICATE_TRANSACTION",
+      "root_cause": "2 bank-side transactions reference one payment while the ledger shows a single entry, consistent with a duplicate bank posting.",
+      "evidence": [
+        "2 bank transactions reference this single payment",
+        "Ledger shows only one corresponding entry"
+      ],
+      "confidence": 0.91,
+      "recommendation": "Auto-resolve",
+      "decision": "AUTO_RESOLVE",
+      "action": "reconciliation_status_updated"
+    },
+    {
+      "payment_id": "P097",
+      "engine_exception_type": "DATE_MISMATCH",
+      "agent_exception_type": "POSSIBLE_DELAYED_SETTLEMENT",
+      "root_cause": "Amounts reconcile; the bank side settled later than the payment date, consistent with normal settlement delay.",
+      "evidence": [
+        "Payment, bank, and ledger amounts agree",
+        "Bank settlement date differs from payment date"
+      ],
+      "confidence": 0.95,
+      "recommendation": "Auto-resolve",
+      "decision": "AUTO_RESOLVE",
+      "action": "reconciliation_status_updated"
+    },
+    {
+      "payment_id": "P100",
+      "engine_exception_type": "LEDGER_RECORD_MISSING",
+      "agent_exception_type": "LEDGER_RECORD_MISSING",
+      "root_cause": "Bank confirms settlement, but the merchant ledger has no matching entry. Possible posting delay or an internal bookkeeping gap \u2014 not confirmed.",
+      "evidence": [
+        "Payment was captured",
+        "Bank transaction is present",
+        "No matching ledger entry found"
+      ],
+      "confidence": 0.75,
+      "recommendation": "Human review",
+      "decision": "SUGGEST_HUMAN_APPROVAL",
+      "action": "pending_human_approval"
+    }
+  ],
+  "audit_trail": [
+    {
+      "timestamp": "2026-08-30 06:37:44",
+      "payment_id": "P003",
+      "exception_type": "POSSIBLE_DELAYED_SETTLEMENT",
+      "evidence": {
+        "payment_id": "P003",
+        "payment": {
+          "amount": 27219.0,
+          "date": "2026-08-29"
+        },
+        "bank": {
+          "amount": 27219.0,
+          "date": "2026-09-03"
+        },
+        "ledger": {
+          "amount": 27219.0,
+          "date": "2026-08-29"
+        },
+        "engine_exception_type": "DATE_MISMATCH",
+        "engine_notes": "amounts agree; bank settlement delayed 5 day(s)",
+        "duplicate_count": null
+      },
+      "agent_reasoning_summary": "Amounts reconcile; the bank side settled later than the payment date, consistent with normal settlement delay.",
+      "confidence": 0.95,
+      "decision": "AUTO_RESOLVE",
+      "action": "reconciliation_status_updated"
+    },
+    {
+      "timestamp": "2026-08-30 06:37:44",
+      "payment_id": "P005",
+      "exception_type": "AMOUNT_MISMATCH",
+      "evidence": {
+        "payment_id": "P005",
+        "payment": {
+          "amount": 193.0,
+          "date": "2026-08-30"
+        },
+        "bank": {
+          "amount": 1.0,
+          "date": "2026-08-30"
+        },
+        "ledger": {
+          "amount": 193.0,
+          "date": "2026-08-30"
+        },
+        "engine_exception_type": "AMOUNT_MISMATCH",
+        "engine_notes": "amount disagreement between sources",
+        "duplicate_count": null
+      },
+      "agent_reasoning_summary": "The bank amount disagrees with the payment amount by -192.0. Cause not confirmed \u2014 could be a fee, partial settlement, or data entry error.",
+      "confidence": 0.6,
+      "decision": "ESCALATE_HUMAN_REVIEW",
+      "action": "escalated_for_investigation"
+    },
+    {
+      "timestamp": "2026-08-30 06:37:44",
+      "payment_id": "P008",
+      "exception_type": "BANK_RECORD_MISSING",
+      "evidence": {
+        "payment_id": "P008",
+        "payment": {
+          "amount": 27486.0,
+          "date": "2026-08-25"
+        },
+        "bank": null,
+        "ledger": {
+          "amount": 27486.0,
+          "date": "2026-08-25"
+        },
+        "engine_exception_type": "BANK_RECORD_MISSING",
+        "engine_notes": "no bank transaction found for this payment",
+        "duplicate_count": null
+      },
+      "agent_reasoning_summary": "Payment was captured and recorded in the ledger, but no corresponding bank transaction is present. Possible delayed or missing settlement \u2014 not confirmed.",
+      "confidence": 0.8,
+      "decision": "SUGGEST_HUMAN_APPROVAL",
+      "action": "pending_human_approval"
+    },
+    {
+      "timestamp": "2026-08-30 06:37:44",
+      "payment_id": "P010",
+      "exception_type": "LEDGER_RECORD_MISSING",
+      "evidence": {
+        "payment_id": "P010",
+        "payment": {
+          "amount": 612.0,
+          "date": "2026-08-30"
+        },
+        "bank": {
+          "amount": 612.0,
+          "date": "2026-08-30"
+        },
+        "ledger": null,
+        "engine_exception_type": "LEDGER_RECORD_MISSING",
+        "engine_notes": "no ledger entry found for this payment",
+        "duplicate_count": null
+      },
+      "agent_reasoning_summary": "Bank confirms settlement, but the merchant ledger has no matching entry. Possible posting delay or an internal bookkeeping gap \u2014 not confirmed.",
+      "confidence": 0.75,
+      "decision": "SUGGEST_HUMAN_APPROVAL",
+      "action": "pending_human_approval"
+    },
+    {
+      "timestamp": "2026-08-30 06:37:44",
+      "payment_id": "P011",
+      "exception_type": "BANK_RECORD_MISSING",
+      "evidence": {
+        "payment_id": "P011",
+        "payment": {
+          "amount": 961.0,
+          "date": "2026-08-22"
+        },
+        "bank": null,
+        "ledger": {
+          "amount": 961.0,
+          "date": "2026-08-22"
+        },
+        "engine_exception_type": "BANK_RECORD_MISSING",
+        "engine_notes": "no bank transaction found for this payment",
+        "duplicate_count": null
+      },
+      "agent_reasoning_summary": "Payment was captured and recorded in the ledger, but no corresponding bank transaction is present. Possible delayed or missing settlement \u2014 not confirmed.",
+      "confidence": 0.8,
+      "decision": "SUGGEST_HUMAN_APPROVAL",
+      "action": "pending_human_approval"
+    },
+    {
+      "timestamp": "2026-08-30 06:37:44",
+      "payment_id": "P015",
+      "exception_type": "BANK_RECORD_MISSING",
+      "evidence": {
+        "payment_id": "P015",
+        "payment": {
+          "amount": 14535.0,
+          "date": "2026-08-22"
+        },
+        "bank": null,
+        "ledger": {
+          "amount": 14535.0,
+          "date": "2026-08-22"
+        },
+        "engine_exception_type": "BANK_RECORD_MISSING",
+        "engine_notes": "no bank transaction found for this payment",
+        "duplicate_count": null
+      },
+      "agent_reasoning_summary": "Payment was captured and recorded in the ledger, but no corresponding bank transaction is present. Possible delayed or missing settlement \u2014 not confirmed.",
+      "confidence": 0.8,
+      "decision": "SUGGEST_HUMAN_APPROVAL",
+      "action": "pending_human_approval"
+    },
+    {
+      "timestamp": "2026-08-30 06:37:44",
+      "payment_id": "P018",
+      "exception_type": "POSSIBLE_DELAYED_SETTLEMENT",
+      "evidence": {
+        "payment_id": "P018",
+        "payment": {
+          "amount": 38711.0,
+          "date": "2026-08-27"
+        },
+        "bank": {
+          "amount": 38711.0,
+          "date": "2026-08-29"
+        },
+        "ledger": {
+          "amount": 38711.0,
+          "date": "2026-08-27"
+        },
+        "engine_exception_type": "DATE_MISMATCH",
+        "engine_notes": "amounts agree; bank settlement delayed 2 day(s)",
+        "duplicate_count": null
+      },
+      "agent_reasoning_summary": "Amounts reconcile; the bank side settled later than the payment date, consistent with normal settlement delay.",
+      "confidence": 0.95,
+      "decision": "AUTO_RESOLVE",
+      "action": "reconciliation_status_updated"
+    },
+    {
+      "timestamp": "2026-08-30 06:37:44",
+      "payment_id": "P019",
+      "exception_type": "BANK_RECORD_MISSING",
+      "evidence": {
+        "payment_id": "P019",
+        "payment": {
+          "amount": 330.0,
+          "date": "2026-08-29"
+        },
+        "bank": null,
+        "ledger": {
+          "amount": 330.0,
+          "date": "2026-08-29"
+        },
+        "engine_exception_type": "BANK_RECORD_MISSING",
+        "engine_notes": "no bank transaction found for this payment",
+        "duplicate_count": null
+      },
+      "agent_reasoning_summary": "Payment was captured and recorded in the ledger, but no corresponding bank transaction is present. Possible delayed or missing settlement \u2014 not confirmed.",
+      "confidence": 0.8,
+      "decision": "SUGGEST_HUMAN_APPROVAL",
+      "action": "pending_human_approval"
+    },
+    {
+      "timestamp": "2026-08-30 06:37:44",
+      "payment_id": "P024",
+      "exception_type": "UNRESOLVED",
+      "evidence": {
+        "payment_id": "P024",
+        "payment": {
+          "amount": 2588.0,
+          "date": "2026-08-26"
+        },
+        "bank": {
+          "amount": 2590.0,
+          "date": "2026-08-28"
+        },
+        "ledger": {
+          "amount": 2589.0,
+          "date": "2026-08-26"
+        },
+        "engine_exception_type": "AMBIGUOUS",
+        "engine_notes": "small multi-field drift; needs review before auto-resolving",
+        "duplicate_count": null
+      },
+      "agent_reasoning_summary": "Evidence shows small, multi-field drift that does not match a single known pattern confidently enough to classify.",
+      "confidence": 0.45,
+      "decision": "ESCALATE_HUMAN_REVIEW",
+      "action": "escalated_for_investigation"
+    },
+    {
+      "timestamp": "2026-08-30 06:37:44",
+      "payment_id": "P025",
+      "exception_type": "LEDGER_RECORD_MISSING",
+      "evidence": {
+        "payment_id": "P025",
+        "payment": {
+          "amount": 2612.0,
+          "date": "2026-08-25"
+        },
+        "bank": {
+          "amount": 2612.0,
+          "date": "2026-08-25"
+        },
+        "ledger": null,
+        "engine_exception_type": "LEDGER_RECORD_MISSING",
+        "engine_notes": "no ledger entry found for this payment",
+        "duplicate_count": null
+      },
+      "agent_reasoning_summary": "Bank confirms settlement, but the merchant ledger has no matching entry. Possible posting delay or an internal bookkeeping gap \u2014 not confirmed.",
+      "confidence": 0.75,
+      "decision": "SUGGEST_HUMAN_APPROVAL",
+      "action": "pending_human_approval"
+    },
+    {
+      "timestamp": "2026-08-30 06:37:44",
+      "payment_id": "P027",
+      "exception_type": "LEDGER_RECORD_MISSING",
+      "evidence": {
+        "payment_id": "P027",
+        "payment": {
+          "amount": 4006.0,
+          "date": "2026-08-23"
+        },
+        "bank": {
+          "amount": 4006.0,
+          "date": "2026-08-23"
+        },
+        "ledger": null,
+        "engine_exception_type": "LEDGER_RECORD_MISSING",
+        "engine_notes": "no ledger entry found for this payment",
+        "duplicate_count": null
+      },
+      "agent_reasoning_summary": "Bank confirms settlement, but the merchant ledger has no matching entry. Possible posting delay or an internal bookkeeping gap \u2014 not confirmed.",
+      "confidence": 0.75,
+      "decision": "SUGGEST_HUMAN_APPROVAL",
+      "action": "pending_human_approval"
+    },
+    {
+      "timestamp": "2026-08-30 06:37:44",
+      "payment_id": "P029",
+      "exception_type": "DUPLICATE_TRANSACTION",
+      "evidence": {
+        "payment_id": "P029",
+        "payment": {
+          "amount": 4872.0,
+          "date": "2026-08-27"
+        },
+        "bank": {
+          "amount": 4872.0,
+          "date": "2026-08-27"
+        },
+        "ledger": {
+          "amount": 4872.0,
+          "date": "2026-08-27"
+        },
+        "engine_exception_type": "POSSIBLE_DUPLICATE",
+        "engine_notes": "2 bank transactions reference this payment",
+        "duplicate_count": 2
+      },
+      "agent_reasoning_summary": "2 bank-side transactions reference one payment while the ledger shows a single entry, consistent with a duplicate bank posting.",
+      "confidence": 0.91,
+      "decision": "AUTO_RESOLVE",
+      "action": "reconciliation_status_updated"
+    },
+    {
+      "timestamp": "2026-08-30 06:37:44",
+      "payment_id": "P034",
+      "exception_type": "AMOUNT_MISMATCH",
+      "evidence": {
+        "payment_id": "P034",
+        "payment": {
+          "amount": 42954.0,
+          "date": "2026-08-22"
+        },
+        "bank": {
+          "amount": 42454.0,
+          "date": "2026-08-22"
+        },
+        "ledger": {
+          "amount": 42954.0,
+          "date": "2026-08-22"
+        },
+        "engine_exception_type": "AMOUNT_MISMATCH",
+        "engine_notes": "amount disagreement between sources",
+        "duplicate_count": null
+      },
+      "agent_reasoning_summary": "The bank amount disagrees with the payment amount by -500.0. Cause not confirmed \u2014 could be a fee, partial settlement, or data entry error.",
+      "confidence": 0.55,
+      "decision": "ESCALATE_HUMAN_REVIEW",
+      "action": "escalated_for_investigation"
+    },
+    {
+      "timestamp": "2026-08-30 06:37:44",
+      "payment_id": "P035",
+      "exception_type": "BANK_RECORD_MISSING",
+      "evidence": {
+        "payment_id": "P035",
+        "payment": {
+          "amount": 14490.0,
+          "date": "2026-08-21"
+        },
+        "bank": null,
+        "ledger": {
+          "amount": 14490.0,
+          "date": "2026-08-21"
+        },
+        "engine_exception_type": "BANK_RECORD_MISSING",
+        "engine_notes": "no bank transaction found for this payment",
+        "duplicate_count": null
+      },
+      "agent_reasoning_summary": "Payment was captured and recorded in the ledger, but no corresponding bank transaction is present. Possible delayed or missing settlement \u2014 not confirmed.",
+      "confidence": 0.8,
+      "decision": "SUGGEST_HUMAN_APPROVAL",
+      "action": "pending_human_approval"
+    },
+    {
+      "timestamp": "2026-08-30 06:37:44",
+      "payment_id": "P037",
+      "exception_type": "UNRESOLVED",
+      "evidence": {
+        "payment_id": "P037",
+        "payment": {
+          "amount": 37474.0,
+          "date": "2026-08-29"
+        },
+        "bank": {
+          "amount": 37477.0,
+          "date": "2026-09-01"
+        },
+        "ledger": {
+          "amount": 37473.0,
+          "date": "2026-08-29"
+        },
+        "engine_exception_type": "AMBIGUOUS",
+        "engine_notes": "small multi-field drift; needs review before auto-resolving",
+        "duplicate_count": null
+      },
+      "agent_reasoning_summary": "Evidence shows small, multi-field drift that does not match a single known pattern confidently enough to classify.",
+      "confidence": 0.45,
+      "decision": "ESCALATE_HUMAN_REVIEW",
+      "action": "escalated_for_investigation"
+    },
+    {
+      "timestamp": "2026-08-30 06:37:44",
+      "payment_id": "P039",
+      "exception_type": "DUPLICATE_TRANSACTION",
+      "evidence": {
+        "payment_id": "P039",
+        "payment": {
+          "amount": 5915.0,
+          "date": "2026-08-21"
+        },
+        "bank": {
+          "amount": 5915.0,
+          "date": "2026-08-21"
+        },
+        "ledger": {
+          "amount": 5915.0,
+          "date": "2026-08-21"
+        },
+        "engine_exception_type": "POSSIBLE_DUPLICATE",
+        "engine_notes": "2 bank transactions reference this payment",
+        "duplicate_count": 2
+      },
+      "agent_reasoning_summary": "2 bank-side transactions reference one payment while the ledger shows a single entry, consistent with a duplicate bank posting.",
+      "confidence": 0.91,
+      "decision": "AUTO_RESOLVE",
+      "action": "reconciliation_status_updated"
+    },
+    {
+      "timestamp": "2026-08-30 06:37:44",
+      "payment_id": "P046",
+      "exception_type": "AMOUNT_MISMATCH",
+      "evidence": {
+        "payment_id": "P046",
+        "payment": {
+          "amount": 23342.0,
+          "date": "2026-08-30"
+        },
+        "bank": {
+          "amount": 24092.0,
+          "date": "2026-08-30"
+        },
+        "ledger": {
+          "amount": 23342.0,
+          "date": "2026-08-30"
+        },
+        "engine_exception_type": "AMOUNT_MISMATCH",
+        "engine_notes": "amount disagreement between sources",
+        "duplicate_count": null
+      },
+      "agent_reasoning_summary": "The bank amount disagrees with the payment amount by 750.0. Cause not confirmed \u2014 could be a fee, partial settlement, or data entry error.",
+      "confidence": 0.68,
+      "decision": "ESCALATE_HUMAN_REVIEW",
+      "action": "escalated_for_investigation"
+    },
+    {
+      "timestamp": "2026-08-30 06:37:44",
+      "payment_id": "P047",
+      "exception_type": "AMOUNT_MISMATCH",
+      "evidence": {
+        "payment_id": "P047",
+        "payment": {
+          "amount": 617.0,
+          "date": "2026-08-21"
+        },
+        "bank": {
+          "amount": 1117.0,
+          "date": "2026-08-21"
+        },
+        "ledger": {
+          "amount": 617.0,
+          "date": "2026-08-21"
+        },
+        "engine_exception_type": "AMOUNT_MISMATCH",
+        "engine_notes": "amount disagreement between sources",
+        "duplicate_count": null
+      },
+      "agent_reasoning_summary": "The bank amount disagrees with the payment amount by 500.0. Cause not confirmed \u2014 could be a fee, partial settlement, or data entry error.",
+      "confidence": 0.6,
+      "decision": "ESCALATE_HUMAN_REVIEW",
+      "action": "escalated_for_investigation"
+    },
+    {
+      "timestamp": "2026-08-30 06:37:44",
+      "payment_id": "P048",
+      "exception_type": "AMOUNT_MISMATCH",
+      "evidence": {
+        "payment_id": "P048",
+        "payment": {
+          "amount": 949.0,
+          "date": "2026-08-25"
+        },
+        "bank": {
+          "amount": 1699.0,
+          "date": "2026-08-25"
+        },
+        "ledger": {
+          "amount": 949.0,
+          "date": "2026-08-25"
+        },
+        "engine_exception_type": "AMOUNT_MISMATCH",
+        "engine_notes": "amount disagreement between sources",
+        "duplicate_count": null
+      },
+      "agent_reasoning_summary": "The bank amount disagrees with the payment amount by 750.0. Cause not confirmed \u2014 could be a fee, partial settlement, or data entry error.",
+      "confidence": 0.6,
+      "decision": "ESCALATE_HUMAN_REVIEW",
+      "action": "escalated_for_investigation"
+    },
+    {
+      "timestamp": "2026-08-30 06:37:44",
+      "payment_id": "P051",
+      "exception_type": "UNRESOLVED",
+      "evidence": {
+        "payment_id": "P051",
+        "payment": {
+          "amount": 807.0,
+          "date": "2026-08-25"
+        },
+        "bank": {
+          "amount": 810.0,
+          "date": "2026-08-28"
+        },
+        "ledger": {
+          "amount": 807.0,
+          "date": "2026-08-25"
+        },
+        "engine_exception_type": "AMBIGUOUS",
+        "engine_notes": "small multi-field drift; needs review before auto-resolving",
+        "duplicate_count": null
+      },
+      "agent_reasoning_summary": "Evidence shows small, multi-field drift that does not match a single known pattern confidently enough to classify.",
+      "confidence": 0.45,
+      "decision": "ESCALATE_HUMAN_REVIEW",
+      "action": "escalated_for_investigation"
+    },
+    {
+      "timestamp": "2026-08-30 06:37:44",
+      "payment_id": "P058",
+      "exception_type": "AMOUNT_MISMATCH",
+      "evidence": {
+        "payment_id": "P058",
+        "payment": {
+          "amount": 1387.0,
+          "date": "2026-08-25"
+        },
+        "bank": {
+          "amount": 1287.0,
+          "date": "2026-08-25"
+        },
+        "ledger": {
+          "amount": 1387.0,
+          "date": "2026-08-25"
+        },
+        "engine_exception_type": "AMOUNT_MISMATCH",
+        "engine_notes": "amount disagreement between sources",
+        "duplicate_count": null
+      },
+      "agent_reasoning_summary": "The bank amount disagrees with the payment amount by -100.0. Cause not confirmed \u2014 could be a fee, partial settlement, or data entry error.",
+      "confidence": 0.68,
+      "decision": "ESCALATE_HUMAN_REVIEW",
+      "action": "escalated_for_investigation"
+    },
+    {
+      "timestamp": "2026-08-30 06:37:44",
+      "payment_id": "P060",
+      "exception_type": "AMOUNT_MISMATCH",
+      "evidence": {
+        "payment_id": "P060",
+        "payment": {
+          "amount": 795.0,
+          "date": "2026-08-21"
+        },
+        "bank": {
+          "amount": 695.0,
+          "date": "2026-08-21"
+        },
+        "ledger": {
+          "amount": 795.0,
+          "date": "2026-08-21"
+        },
+        "engine_exception_type": "AMOUNT_MISMATCH",
+        "engine_notes": "amount disagreement between sources",
+        "duplicate_count": null
+      },
+      "agent_reasoning_summary": "The bank amount disagrees with the payment amount by -100.0. Cause not confirmed \u2014 could be a fee, partial settlement, or data entry error.",
+      "confidence": 0.68,
+      "decision": "ESCALATE_HUMAN_REVIEW",
+      "action": "escalated_for_investigation"
+    },
+    {
+      "timestamp": "2026-08-30 06:37:44",
+      "payment_id": "P064",
+      "exception_type": "AMOUNT_MISMATCH",
+      "evidence": {
+        "payment_id": "P064",
+        "payment": {
+          "amount": 9821.0,
+          "date": "2026-08-26"
+        },
+        "bank": {
+          "amount": 9321.0,
+          "date": "2026-08-26"
+        },
+        "ledger": {
+          "amount": 9821.0,
+          "date": "2026-08-26"
+        },
+        "engine_exception_type": "AMOUNT_MISMATCH",
+        "engine_notes": "amount disagreement between sources",
+        "duplicate_count": null
+      },
+      "agent_reasoning_summary": "The bank amount disagrees with the payment amount by -500.0. Cause not confirmed \u2014 could be a fee, partial settlement, or data entry error.",
+      "confidence": 0.68,
+      "decision": "ESCALATE_HUMAN_REVIEW",
+      "action": "escalated_for_investigation"
+    },
+    {
+      "timestamp": "2026-08-30 06:37:44",
+      "payment_id": "P065",
+      "exception_type": "LEDGER_RECORD_MISSING",
+      "evidence": {
+        "payment_id": "P065",
+        "payment": {
+          "amount": 18167.0,
+          "date": "2026-08-24"
+        },
+        "bank": {
+          "amount": 18167.0,
+          "date": "2026-08-24"
+        },
+        "ledger": null,
+        "engine_exception_type": "LEDGER_RECORD_MISSING",
+        "engine_notes": "no ledger entry found for this payment",
+        "duplicate_count": null
+      },
+      "agent_reasoning_summary": "Bank confirms settlement, but the merchant ledger has no matching entry. Possible posting delay or an internal bookkeeping gap \u2014 not confirmed.",
+      "confidence": 0.75,
+      "decision": "SUGGEST_HUMAN_APPROVAL",
+      "action": "pending_human_approval"
+    },
+    {
+      "timestamp": "2026-08-30 06:37:44",
+      "payment_id": "P067",
+      "exception_type": "LEDGER_RECORD_MISSING",
+      "evidence": {
+        "payment_id": "P067",
+        "payment": {
+          "amount": 37554.0,
+          "date": "2026-08-26"
+        },
+        "bank": {
+          "amount": 37554.0,
+          "date": "2026-08-26"
+        },
+        "ledger": null,
+        "engine_exception_type": "LEDGER_RECORD_MISSING",
+        "engine_notes": "no ledger entry found for this payment",
+        "duplicate_count": null
+      },
+      "agent_reasoning_summary": "Bank confirms settlement, but the merchant ledger has no matching entry. Possible posting delay or an internal bookkeeping gap \u2014 not confirmed.",
+      "confidence": 0.75,
+      "decision": "SUGGEST_HUMAN_APPROVAL",
+      "action": "pending_human_approval"
+    },
+    {
+      "timestamp": "2026-08-30 06:37:44",
+      "payment_id": "P069",
+      "exception_type": "POSSIBLE_DELAYED_SETTLEMENT",
+      "evidence": {
+        "payment_id": "P069",
+        "payment": {
+          "amount": 38173.0,
+          "date": "2026-08-29"
+        },
+        "bank": {
+          "amount": 38173.0,
+          "date": "2026-09-02"
+        },
+        "ledger": {
+          "amount": 38173.0,
+          "date": "2026-08-29"
+        },
+        "engine_exception_type": "DATE_MISMATCH",
+        "engine_notes": "amounts agree; bank settlement delayed 4 day(s)",
+        "duplicate_count": null
+      },
+      "agent_reasoning_summary": "Amounts reconcile; the bank side settled later than the payment date, consistent with normal settlement delay.",
+      "confidence": 0.95,
+      "decision": "AUTO_RESOLVE",
+      "action": "reconciliation_status_updated"
+    },
+    {
+      "timestamp": "2026-08-30 06:37:44",
+      "payment_id": "P072",
+      "exception_type": "UNRESOLVED",
+      "evidence": {
+        "payment_id": "P072",
+        "payment": {
+          "amount": 25392.0,
+          "date": "2026-08-24"
+        },
+        "bank": {
+          "amount": 25391.0,
+          "date": "2026-08-25"
+        },
+        "ledger": {
+          "amount": 25392.0,
+          "date": "2026-08-24"
+        },
+        "engine_exception_type": "AMBIGUOUS",
+        "engine_notes": "small multi-field drift; needs review before auto-resolving",
+        "duplicate_count": null
+      },
+      "agent_reasoning_summary": "Evidence shows small, multi-field drift that does not match a single known pattern confidently enough to classify.",
+      "confidence": 0.45,
+      "decision": "ESCALATE_HUMAN_REVIEW",
+      "action": "escalated_for_investigation"
+    },
+    {
+      "timestamp": "2026-08-30 06:37:44",
+      "payment_id": "P074",
+      "exception_type": "POSSIBLE_DELAYED_SETTLEMENT",
+      "evidence": {
+        "payment_id": "P074",
+        "payment": {
+          "amount": 4185.0,
+          "date": "2026-08-26"
+        },
+        "bank": {
+          "amount": 4185.0,
+          "date": "2026-08-29"
+        },
+        "ledger": {
+          "amount": 4185.0,
+          "date": "2026-08-26"
+        },
+        "engine_exception_type": "DATE_MISMATCH",
+        "engine_notes": "amounts agree; bank settlement delayed 3 day(s)",
+        "duplicate_count": null
+      },
+      "agent_reasoning_summary": "Amounts reconcile; the bank side settled later than the payment date, consistent with normal settlement delay.",
+      "confidence": 0.95,
+      "decision": "AUTO_RESOLVE",
+      "action": "reconciliation_status_updated"
+    },
+    {
+      "timestamp": "2026-08-30 06:37:44",
+      "payment_id": "P076",
+      "exception_type": "DUPLICATE_TRANSACTION",
+      "evidence": {
+        "payment_id": "P076",
+        "payment": {
+          "amount": 923.0,
+          "date": "2026-08-28"
+        },
+        "bank": {
+          "amount": 923.0,
+          "date": "2026-08-28"
+        },
+        "ledger": {
+          "amount": 923.0,
+          "date": "2026-08-28"
+        },
+        "engine_exception_type": "POSSIBLE_DUPLICATE",
+        "engine_notes": "2 bank transactions reference this payment",
+        "duplicate_count": 2
+      },
+      "agent_reasoning_summary": "2 bank-side transactions reference one payment while the ledger shows a single entry, consistent with a duplicate bank posting.",
+      "confidence": 0.91,
+      "decision": "AUTO_RESOLVE",
+      "action": "reconciliation_status_updated"
+    },
+    {
+      "timestamp": "2026-08-30 06:37:44",
+      "payment_id": "P078",
+      "exception_type": "BANK_RECORD_MISSING",
+      "evidence": {
+        "payment_id": "P078",
+        "payment": {
+          "amount": 39004.0,
+          "date": "2026-08-28"
+        },
+        "bank": null,
+        "ledger": {
+          "amount": 39004.0,
+          "date": "2026-08-28"
+        },
+        "engine_exception_type": "BANK_RECORD_MISSING",
+        "engine_notes": "no bank transaction found for this payment",
+        "duplicate_count": null
+      },
+      "agent_reasoning_summary": "Payment was captured and recorded in the ledger, but no corresponding bank transaction is present. Possible delayed or missing settlement \u2014 not confirmed.",
+      "confidence": 0.8,
+      "decision": "SUGGEST_HUMAN_APPROVAL",
+      "action": "pending_human_approval"
+    },
+    {
+      "timestamp": "2026-08-30 06:37:44",
+      "payment_id": "P079",
+      "exception_type": "LEDGER_RECORD_MISSING",
+      "evidence": {
+        "payment_id": "P079",
+        "payment": {
+          "amount": 950.0,
+          "date": "2026-08-27"
+        },
+        "bank": {
+          "amount": 950.0,
+          "date": "2026-08-27"
+        },
+        "ledger": null,
+        "engine_exception_type": "LEDGER_RECORD_MISSING",
+        "engine_notes": "no ledger entry found for this payment",
+        "duplicate_count": null
+      },
+      "agent_reasoning_summary": "Bank confirms settlement, but the merchant ledger has no matching entry. Possible posting delay or an internal bookkeeping gap \u2014 not confirmed.",
+      "confidence": 0.75,
+      "decision": "SUGGEST_HUMAN_APPROVAL",
+      "action": "pending_human_approval"
+    },
+    {
+      "timestamp": "2026-08-30 06:37:44",
+      "payment_id": "P080",
+      "exception_type": "BANK_RECORD_MISSING",
+      "evidence": {
+        "payment_id": "P080",
+        "payment": {
+          "amount": 28173.0,
+          "date": "2026-08-27"
+        },
+        "bank": null,
+        "ledger": {
+          "amount": 28173.0,
+          "date": "2026-08-27"
+        },
+        "engine_exception_type": "BANK_RECORD_MISSING",
+        "engine_notes": "no bank transaction found for this payment",
+        "duplicate_count": null
+      },
+      "agent_reasoning_summary": "Payment was captured and recorded in the ledger, but no corresponding bank transaction is present. Possible delayed or missing settlement \u2014 not confirmed.",
+      "confidence": 0.8,
+      "decision": "SUGGEST_HUMAN_APPROVAL",
+      "action": "pending_human_approval"
+    },
+    {
+      "timestamp": "2026-08-30 06:37:44",
+      "payment_id": "P081",
+      "exception_type": "AMOUNT_MISMATCH",
+      "evidence": {
+        "payment_id": "P081",
+        "payment": {
+          "amount": 15077.0,
+          "date": "2026-08-24"
+        },
+        "bank": {
+          "amount": 14827.0,
+          "date": "2026-08-24"
+        },
+        "ledger": {
+          "amount": 15077.0,
+          "date": "2026-08-24"
+        },
+        "engine_exception_type": "AMOUNT_MISMATCH",
+        "engine_notes": "amount disagreement between sources",
+        "duplicate_count": null
+      },
+      "agent_reasoning_summary": "The bank amount disagrees with the payment amount by -250.0. Cause not confirmed \u2014 could be a fee, partial settlement, or data entry error.",
+      "confidence": 0.55,
+      "decision": "ESCALATE_HUMAN_REVIEW",
+      "action": "escalated_for_investigation"
+    },
+    {
+      "timestamp": "2026-08-30 06:37:44",
+      "payment_id": "P084",
+      "exception_type": "DUPLICATE_TRANSACTION",
+      "evidence": {
+        "payment_id": "P084",
+        "payment": {
+          "amount": 31684.0,
+          "date": "2026-08-27"
+        },
+        "bank": {
+          "amount": 31684.0,
+          "date": "2026-08-27"
+        },
+        "ledger": {
+          "amount": 31684.0,
+          "date": "2026-08-27"
+        },
+        "engine_exception_type": "POSSIBLE_DUPLICATE",
+        "engine_notes": "2 bank transactions reference this payment",
+        "duplicate_count": 2
+      },
+      "agent_reasoning_summary": "2 bank-side transactions reference one payment while the ledger shows a single entry, consistent with a duplicate bank posting.",
+      "confidence": 0.91,
+      "decision": "AUTO_RESOLVE",
+      "action": "reconciliation_status_updated"
+    },
+    {
+      "timestamp": "2026-08-30 06:37:44",
+      "payment_id": "P085",
+      "exception_type": "UNRESOLVED",
+      "evidence": {
+        "payment_id": "P085",
+        "payment": {
+          "amount": 4388.0,
+          "date": "2026-08-29"
+        },
+        "bank": {
+          "amount": 4386.0,
+          "date": "2026-09-01"
+        },
+        "ledger": {
+          "amount": 4387.0,
+          "date": "2026-08-29"
+        },
+        "engine_exception_type": "AMBIGUOUS",
+        "engine_notes": "small multi-field drift; needs review before auto-resolving",
+        "duplicate_count": null
+      },
+      "agent_reasoning_summary": "Evidence shows small, multi-field drift that does not match a single known pattern confidently enough to classify.",
+      "confidence": 0.45,
+      "decision": "ESCALATE_HUMAN_REVIEW",
+      "action": "escalated_for_investigation"
+    },
+    {
+      "timestamp": "2026-08-30 06:37:44",
+      "payment_id": "P088",
+      "exception_type": "BANK_RECORD_MISSING",
+      "evidence": {
+        "payment_id": "P088",
+        "payment": {
+          "amount": 379.0,
+          "date": "2026-08-26"
+        },
+        "bank": null,
+        "ledger": {
+          "amount": 379.0,
+          "date": "2026-08-26"
+        },
+        "engine_exception_type": "BANK_RECORD_MISSING",
+        "engine_notes": "no bank transaction found for this payment",
+        "duplicate_count": null
+      },
+      "agent_reasoning_summary": "Payment was captured and recorded in the ledger, but no corresponding bank transaction is present. Possible delayed or missing settlement \u2014 not confirmed.",
+      "confidence": 0.8,
+      "decision": "SUGGEST_HUMAN_APPROVAL",
+      "action": "pending_human_approval"
+    },
+    {
+      "timestamp": "2026-08-30 06:37:44",
+      "payment_id": "P090",
+      "exception_type": "AMOUNT_MISMATCH",
+      "evidence": {
+        "payment_id": "P090",
+        "payment": {
+          "amount": 35822.0,
+          "date": "2026-08-29"
+        },
+        "bank": {
+          "amount": 36322.0,
+          "date": "2026-08-29"
+        },
+        "ledger": {
+          "amount": 35822.0,
+          "date": "2026-08-29"
+        },
+        "engine_exception_type": "AMOUNT_MISMATCH",
+        "engine_notes": "amount disagreement between sources",
+        "duplicate_count": null
+      },
+      "agent_reasoning_summary": "The bank amount disagrees with the payment amount by 500.0. Cause not confirmed \u2014 could be a fee, partial settlement, or data entry error.",
+      "confidence": 0.55,
+      "decision": "ESCALATE_HUMAN_REVIEW",
+      "action": "escalated_for_investigation"
+    },
+    {
+      "timestamp": "2026-08-30 06:37:44",
+      "payment_id": "P091",
+      "exception_type": "DUPLICATE_TRANSACTION",
+      "evidence": {
+        "payment_id": "P091",
+        "payment": {
+          "amount": 8022.0,
+          "date": "2026-08-22"
+        },
+        "bank": {
+          "amount": 8022.0,
+          "date": "2026-08-22"
+        },
+        "ledger": {
+          "amount": 8022.0,
+          "date": "2026-08-22"
+        },
+        "engine_exception_type": "POSSIBLE_DUPLICATE",
+        "engine_notes": "2 bank transactions reference this payment",
+        "duplicate_count": 2
+      },
+      "agent_reasoning_summary": "2 bank-side transactions reference one payment while the ledger shows a single entry, consistent with a duplicate bank posting.",
+      "confidence": 0.91,
+      "decision": "AUTO_RESOLVE",
+      "action": "reconciliation_status_updated"
+    },
+    {
+      "timestamp": "2026-08-30 06:37:44",
+      "payment_id": "P097",
+      "exception_type": "POSSIBLE_DELAYED_SETTLEMENT",
+      "evidence": {
+        "payment_id": "P097",
+        "payment": {
+          "amount": 785.0,
+          "date": "2026-08-27"
+        },
+        "bank": {
+          "amount": 785.0,
+          "date": "2026-08-31"
+        },
+        "ledger": {
+          "amount": 785.0,
+          "date": "2026-08-27"
+        },
+        "engine_exception_type": "DATE_MISMATCH",
+        "engine_notes": "amounts agree; bank settlement delayed 4 day(s)",
+        "duplicate_count": null
+      },
+      "agent_reasoning_summary": "Amounts reconcile; the bank side settled later than the payment date, consistent with normal settlement delay.",
+      "confidence": 0.95,
+      "decision": "AUTO_RESOLVE",
+      "action": "reconciliation_status_updated"
+    },
+    {
+      "timestamp": "2026-08-30 06:37:44",
+      "payment_id": "P100",
+      "exception_type": "LEDGER_RECORD_MISSING",
+      "evidence": {
+        "payment_id": "P100",
+        "payment": {
+          "amount": 14980.0,
+          "date": "2026-08-30"
+        },
+        "bank": {
+          "amount": 14980.0,
+          "date": "2026-08-30"
+        },
+        "ledger": null,
+        "engine_exception_type": "LEDGER_RECORD_MISSING",
+        "engine_notes": "no ledger entry found for this payment",
+        "duplicate_count": null
+      },
+      "agent_reasoning_summary": "Bank confirms settlement, but the merchant ledger has no matching entry. Possible posting delay or an internal bookkeeping gap \u2014 not confirmed.",
+      "confidence": 0.75,
+      "decision": "SUGGEST_HUMAN_APPROVAL",
+      "action": "pending_human_approval"
+    }
+  ],
+  "evaluation": {
+    "classification_accuracy": 100.0,
+    "correct": 40,
+    "incorrect": 0,
+    "misclassifications": [],
+    "auto_resolved_count": 10,
+    "safe_auto_resolves": 10,
+    "false_auto_resolves": [],
+    "false_auto_resolve_rate": 0.0
+  }
+}
