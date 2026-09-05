@@ -1,0 +1,22 @@
+[
+  {
+    "payment_id": "pay_Rzp9821x1",
+    "type": "AMOUNT_MISMATCH",
+    "payment_amount": 15000.00,
+    "bank_amount": 14500.00,
+    "ledger_amount": 15000.00,
+    "confidence": 0.88,
+    "decision": "NEEDS_APPROVAL",
+    "hypothesis": "AI detected a transaction gap where Razorpay source logged full value but banking gateway settlement captured ₹500 deficit, likely due to chargeback settlement variations."
+  },
+  {
+    "payment_id": "pay_Rzp5561z2",
+    "type": "CURRENCY_DISCREPANCY",
+    "payment_amount": 23000.00,
+    "bank_amount": null,
+    "ledger_amount": 23000.00,
+    "confidence": 0.94,
+    "decision": "ESCALATED",
+    "hypothesis": "AI Agent flagged structural payment timeout profile. Multi-source network route shows connection failure during ledger booking cycle. Human override recommended."
+  }
+]

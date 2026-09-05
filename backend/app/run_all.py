@@ -115,9 +115,9 @@ def main():
 
     phase1_payload = {"report": phase1["report"], "results": phase1["results"]}
     html = build_dashboard_html(phase1_payload, phase2)
-    with open(args.dashboard_out, "w") as f:
+    with open("../frontend/dashboard.html", "w", encoding="utf-8") as f:
         f.write(html)
-    print(f"[Phase 3] Dashboard written to {args.dashboard_out} ({len(html):,} bytes)")
+    print(f"[Phase 3] Dashboard written to ../frontend/dashboard.html ({len(html):,} bytes)")
 
     if args.phase1_out:
         with open(args.phase1_out, "w") as f:
