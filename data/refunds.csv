@@ -1,2 +1,0 @@
-refund_id,payment_id,refund_amount,refund_status
-REF001,PAY003,2000,processed

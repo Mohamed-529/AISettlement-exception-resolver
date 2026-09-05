@@ -1,6 +1,0 @@
-settlement_id,payment_id,settlement_amount,settlement_status
-SET001,PAY001,10000,settled
-SET002,PAY002,7500,settled
-SET003,PAY003,12000,settled
-SET004,PAY004,4500,settled
-SET005,PAY005,8000,settled
